@@ -1,0 +1,85 @@
+
+<section class="card-section">
+  {% for block in section.blocks %}
+    <div class="card">
+      <i class="{{ block.settings.icon_class }}"></i>
+      <h3>{{ block.settings.title }}</h3>
+      <p>{{ block.settings.paragraph }}</p>
+    </div>
+  {% endfor %}
+</section>
+{% schema %}
+{
+  "name": "CardSection",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Card",
+      "category": "Custom"
+    }
+  ],
+  
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Icon Class",
+          "id": "icon_class",
+          "default": "fas fa-star"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default": "Card Title"
+        },
+        {
+          "type": "textarea",
+          "label": "Paragraph",
+          "id": "paragraph",
+          "default": "Card paragraph text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #F5F1EC;
+}
+
+.card {
+  flex-basis: 20%; 
+  margin: 10px;
+  text-align:center;
+   align-items: center;
+
+}
+
+  .card i {
+  display: block;
+  margin-bottom: 10px;
+  text-align:center;
+}
+
+.card h3, .card p {
+  margin: 0; 
+   font-family: 'Avenir Next', sans-serif;
+  font-weight: 700;
+  text-align:center;
+}
+{% endstylesheet %}
+
+
+{% javascript %}
+{% endjavascript %}

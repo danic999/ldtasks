@@ -1,0 +1,99 @@
+#heading{
+    width: 80%;
+    text-align: center;
+    margin: 64px auto;
+    
+}
+#heading h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+font-size: 54px;
+}
+#heading p {
+    font-family: 'Rajdhani';
+font-weight: 400;
+font-size: 24px;
+
+}
+#heading span{
+    font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+text-decoration: underline;
+}
+#content{
+    display: flex;
+    
+ 
+}
+#card{
+    width: 30%;
+    text-align: center;
+    margin:0 auto;
+    
+}
+#center{
+    position: relative;
+}
+.main-img{
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#image-heading{
+    width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 80px;
+}
+#decoration1{
+    position: absolute;
+    top:-70px;
+    left: -92px;
+}
+#decoration2{
+    position: absolute;
+    bottom:-70px;
+    left: -92px;
+    z-index: -1;
+    
+}
+#decoration3{
+    position: absolute;
+    top:-30px;
+    right: -42px;
+    z-index: -1;
+    
+}
+#decoration4{
+    position: absolute;
+    bottom:-61px;
+    right: -59px;
+    z-index: -1;
+    
+}
+
+
+@media screen and (max-width: 767px) {
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+#card{
+    width: 100%;
+    margin-top: 64px;
+}
+.main-img{
+    width: 304px;
+    height: 304px;
+}
+
+}
